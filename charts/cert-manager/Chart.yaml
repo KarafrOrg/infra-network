@@ -1,4 +1,4 @@
-name: infra-network
+name: infra-network-cert-manager
 description: Network infrastructure setup for homelab
 version: 0.1.0
 apiVersion: v2

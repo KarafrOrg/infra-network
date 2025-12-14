@@ -14,6 +14,6 @@ keywords:
   - loki
   - homelab
 dependencies:
-  - name: cert-manager
+  - name: infra-network-cert-manager
     repository: file://cert-manager
     version: 0.1.0

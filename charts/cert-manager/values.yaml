@@ -1,5 +1,7 @@
 cert-manager:
   installCRDs: true
+  crds:
+    enabled: true
   namespace: cert-manager
   prometheus:
     servicemonitor:

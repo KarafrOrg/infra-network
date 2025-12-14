@@ -2,13 +2,13 @@ cert-manager:
   installCRDs: true
   crds:
     enabled: true
-  namespace: cert-manager
+  namespace: infra-network
   prometheus:
     servicemonitor:
       enabled: true
       labels:
         metrics-collector: prometheus
-      namespace: monitoring
+      namespace: infra-network
   resources:
     limits:
       cpu: 100m

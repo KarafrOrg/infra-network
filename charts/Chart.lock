@@ -1,9 +1,6 @@
 dependencies:
-- name: infra-network-cert-manager
-  repository: file://cert-manager
-  version: 0.1.0
 - name: cert-manager
   repository: https://charts.jetstack.io
-  version: v1.18.2
-digest: sha256:b8449f2fe1e6083b15756938ffe3dd9445f9a3c6530c2b38980982843feef00b
-generated: "2025-12-14T22:17:20.442257+01:00"
+  version: v1.19.0
+digest: sha256:66d369ea42b9c4315c203d491378f7881113aa156329eaa8fa1aa053e8250356
+generated: "2025-12-14T22:29:01.565266+01:00"

@@ -13,7 +13,3 @@ keywords:
   - grafana
   - loki
   - homelab
-dependencies:
-  - name: cert-manager
-    version: 1.19.2
-    repository: https://charts.jetstack.io

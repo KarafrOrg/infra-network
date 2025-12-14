@@ -1,0 +1,31 @@
+cert-manager:
+  installCRDs: true
+  namespace: cert-manager
+  prometheus:
+    servicemonitor:
+      enabled: true
+      labels:
+        metrics-collector: prometheus
+      namespace: monitoring
+  resources:
+    limits:
+      cpu: 100m
+      memory: 256Mi
+      ephemeral-storage: 500Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+      ephemeral-storage: 500Mi
+clusterIssuers:
+  - email: mtoth575@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRefName: letsencrypt
+    solversIngressClass: traefik
+  - email: mtoth575@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRefName: letsencrypt-prod
+    solversIngressClass: traefik
+  - email: mtoth575@gmail.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRefName: letsencrypt-staging
+    solversIngressClass: traefik

@@ -64,4 +64,3 @@ istiod:
         cpu: 1
         memory: 1Gi
     traceSampling: 1.0
-gateway:

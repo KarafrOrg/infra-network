@@ -32,6 +32,7 @@ clusterIssuers:
 
 istiod:
   global:
+    istioNamespace: infra-network
     proxy:
       autoInject: enabled
       resources:

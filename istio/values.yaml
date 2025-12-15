@@ -1,0 +1,34 @@
+base:
+  global:
+    istioNamespace: infra-network
+
+istiod:
+  global:
+    istioNamespace: infra-network
+    proxy:
+      autoInject: enabled
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+        limits:
+          cpu: 500m
+          memory: 512Mi
+    controlPlaneSecurityEnabled: true
+    useMCP: false
+    hub: docker.io/istio
+    tag: 1.20.4
+    sds:
+      enabled: true
+
+  pilot:
+    replicaCount: 2
+    autoscaleEnabled: true
+    resources:
+      requests:
+        cpu: 250m
+        memory: 512Mi
+      limits:
+        cpu: 1
+        memory: 1Gi
+    traceSampling: 1.0

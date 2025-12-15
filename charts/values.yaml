@@ -30,6 +30,10 @@ clusterIssuers:
     privateKeySecretRefName: letsencrypt-staging
     solversIngressClass: traefik
 
+base:
+  global:
+    istioNamespace: infra-network
+
 istiod:
   global:
     istioNamespace: infra-network
@@ -60,3 +64,4 @@ istiod:
         cpu: 1
         memory: 1Gi
     traceSampling: 1.0
+gateway:

@@ -2,5 +2,14 @@ dependencies:
 - name: cert-manager
   repository: https://charts.jetstack.io
   version: v1.19.0
-digest: sha256:00ec0190419534e3301a937657b03888d53b6ff298c351e0966d3c0b1c87bb8c
-generated: "2025-12-14T23:46:57.696038+01:00"
+- name: base
+  repository: https://istio-release.storage.googleapis.com/charts
+  version: 1.20.4
+- name: istiod
+  repository: https://istio-release.storage.googleapis.com/charts
+  version: 1.20.4
+- name: gateway
+  repository: https://istio-release.storage.googleapis.com/charts
+  version: 1.20.4
+digest: sha256:fc75982266c832f9560ed3b601aaad8c070be10b4d7361f564538f896cf80206
+generated: "2025-12-15T01:33:33.540301+01:00"

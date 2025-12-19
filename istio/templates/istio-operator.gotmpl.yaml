@@ -1,15 +1,28 @@
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 metadata:
-  name: default-istio-operator
+  name: istio-control-plane
+  namespace: istio-system
 spec:
   meshConfig:
     enableTracing: true
+
+    defaultConfig:
+      tracing:
+        sampling: 100.0
+
     extensionProviders:
       - name: otel-tracing
         opentelemetry:
+          service: {{ .Values.opentelemetry.address }}
           port: {{ .Values.opentelemetry.port }}
-          address: {{ .Values.opentelemetry.address }}
-          service:
-          resource_detectors:
-            environment: {}
+          http:
+            path: /v1/traces
+            timeout: 10s
+            headers:
+              content-type: application/json
+
+    # Tell Istio to actually use the provider
+    defaultProviders:
+      tracing:
+        - otel-tracing

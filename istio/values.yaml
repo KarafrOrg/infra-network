@@ -1,7 +1,6 @@
 base:
   global:
     istioNamespace: infra-network
-
 istiod:
   global:
     istioNamespace: infra-network
@@ -32,3 +31,6 @@ istiod:
         cpu: 1
         memory: 1Gi
     traceSampling: 1.0
+
+  sidecarInjectorWebhook:
+    enableNamespacesByDefault: true

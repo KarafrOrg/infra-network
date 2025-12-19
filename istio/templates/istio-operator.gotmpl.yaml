@@ -1,0 +1,13 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  meshConfig:
+    enableTracing: true
+    extensionProviders:
+      - name: otel-tracing
+        opentelemetry:
+          port: {{ .Values.opentelemetry.port }}
+          address: {{ .Values.opentelemetry.address }}
+          service:
+          resource_detectors:
+            environment: {}

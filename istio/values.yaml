@@ -1,7 +1,14 @@
+global:
+  proxy:
+    tracer: openTelemetry
 base:
   global:
     istioNamespace: infra-network
 istiod:
+  meshConfig:
+    enablePrometheusMerge: true
+  telemetry:
+    enabled: true
   global:
     istioNamespace: infra-network
     proxy:
@@ -34,3 +41,7 @@ istiod:
 
   sidecarInjectorWebhook:
     enableNamespacesByDefault: true
+
+opentelemetry:
+  address: infra-monitoring-alloy-otel-collector.infra-monitoring.svc.cluster.local
+  port: 4318

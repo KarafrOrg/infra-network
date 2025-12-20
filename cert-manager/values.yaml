@@ -16,6 +16,26 @@ cert-manager:
       cpu: 50m
       memory: 128Mi
       ephemeral-storage: 500Mi
+  cainjector:
+    resources:
+      limits:
+        cpu: 50m
+        memory: 128Mi
+        ephemeral-storage: 200Mi
+      requests:
+        cpu: 25m
+        memory: 64Mi
+        ephemeral-storage: 200Mi
+  webhook:
+    resources:
+      limits:
+        cpu: 50m
+        memory: 128Mi
+        ephemeral-storage: 200Mi
+      requests:
+        cpu: 25m
+        memory: 64Mi
+        ephemeral-storage: 200Mi
 clusterIssuers:
   - email: mtoth575@gmail.com
     server: https://acme-v02.api.letsencrypt.org/directory

@@ -14,4 +14,5 @@ keywords:
 dependencies:
   - name: base
     version: 1.28.2
+    alias: istio-base
     repository: https://istio-release.storage.googleapis.com/charts

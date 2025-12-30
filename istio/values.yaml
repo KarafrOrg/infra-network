@@ -1,1 +1,4 @@
-base: {}
+istio-base:
+  _internal_defaults_do_not_set:
+    global:
+      istioNamespace: infra-network

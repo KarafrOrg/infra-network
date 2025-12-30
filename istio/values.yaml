@@ -5,3 +5,7 @@ istiod:
   global:
     istioNamespace: infra-network
   profile: ambient
+cni:
+  global:
+    istioNamespace: infra-network
+  profile: ambient

@@ -19,5 +19,4 @@ cni:
       - kube-public
       - argocd
 ztunnel:
-  global:
-    istioNamespace: infra-network
+  istioNamespace: infra-network

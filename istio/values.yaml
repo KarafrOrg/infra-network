@@ -1,10 +1,19 @@
 istio-base:
   global:
     istioNamespace: infra-network
+
 istiod:
   global:
     istioNamespace: infra-network
   profile: ambient
+
+  meshConfig:
+    enableTracing: true
+    extensionProviders:
+      - name: tempo
+        opentelemetry:
+          service: infra-monitoring-tempo.infra-monitoring.svc.cluster.local
+          port: 4317
 cni:
   global:
     istioNamespace: infra-network

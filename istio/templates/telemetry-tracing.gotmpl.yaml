@@ -1,0 +1,10 @@
+apiVersion: telemetry.istio.io/v1
+kind: Telemetry
+metadata:
+  name: tempo-tracing
+  namespace: infra-network
+spec:
+  tracing:
+    - randomSamplingPercentage: 100
+      providers:
+        - name: tempo

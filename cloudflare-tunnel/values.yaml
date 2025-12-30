@@ -1,4 +1,0 @@
-cloudflare-tunnel:
-  cloudflare:
-    tunnelName: karafra-net
-    secretName: cloudflare-credentials

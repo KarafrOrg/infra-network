@@ -17,3 +17,4 @@ cni:
     excludeNamespaces:
       - kube-system
       - kube-public
+      -

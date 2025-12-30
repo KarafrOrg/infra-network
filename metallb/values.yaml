@@ -1,1 +1,4 @@
-metallb: {}
+metallb:
+  prometheus:
+    serviceMonitor:
+      enabled: true

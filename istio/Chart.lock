@@ -8,5 +8,8 @@ dependencies:
 - name: cni
   repository: https://istio-release.storage.googleapis.com/charts
   version: 1.28.2
-digest: sha256:de0de4c725adbf82930ca26c68dc2bbc06ef19fd0d38a4af0a0ecf7346d1aed5
-generated: "2025-12-30T10:36:44.744997+01:00"
+- name: ztunnel
+  repository: https://istio-release.storage.googleapis.com/charts
+  version: 1.28.2
+digest: sha256:d187f68726cfffc69b115d2d98ee9c85ae97d763e6b400de1c75dc2fcd1c08b1
+generated: "2025-12-30T10:53:21.820744+01:00"

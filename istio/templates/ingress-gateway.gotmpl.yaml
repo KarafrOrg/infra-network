@@ -14,3 +14,6 @@ spec:
         certificateRefs:
           - kind: Secret
             name: public-ingress-tls
+      allowedRoutes:
+        namespaces:
+          from: All

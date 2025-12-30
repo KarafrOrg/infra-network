@@ -10,10 +10,10 @@ cni:
     istioNamespace: infra-network
   profile: ambient
   cni:
-    chained: false
+    chained: true
     cniBinDir: /var/lib/rancher/k3s/data/current/bin
     cniConfDir: /var/lib/rancher/k3s/agent/etc/cni/net.d
-    cniConfFileName: "10-calico.conflist"
+    cniConfFileName: "10-flannel.conflist"
     excludeNamespaces:
       - kube-system
       - kube-public

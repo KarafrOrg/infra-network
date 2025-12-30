@@ -10,5 +10,8 @@ cni:
     istioNamespace: infra-network
     platform: k3s
   profile: ambient
+  cni:
+    repair:
+      enabled: true
 ztunnel:
   istioNamespace: infra-network

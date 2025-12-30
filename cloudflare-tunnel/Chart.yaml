@@ -1,0 +1,17 @@
+name: infra-network
+description: Network infrastructure setup for homelab
+version: 0.1.0
+apiVersion: v2
+type: application
+appVersion: "1.0.0"
+maintainers:
+  - name: KarafrOrg
+    email: karafra@karafra.net
+keywords:
+  - networking
+  - cert-manager
+  - homelab
+dependencies:
+  - name: cloudflare-tunnel
+    version: v0.3.2
+    repository: https://cloudflare.github.io/helm-charts

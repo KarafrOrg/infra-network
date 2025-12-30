@@ -8,15 +8,7 @@ istiod:
 cni:
   global:
     istioNamespace: infra-network
+    platform: k3s
   profile: ambient
-  cni:
-    chained: true
-    cniBinDir: /var/lib/rancher/k3s/data/current/bin
-    cniConfDir: /var/lib/rancher/k3s/agent/etc/cni/net.d
-    cniConfFileName: "10-flannel.conflist"
-    excludeNamespaces:
-      - kube-system
-      - kube-public
-      - argocd
 ztunnel:
   istioNamespace: infra-network

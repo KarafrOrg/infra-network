@@ -11,5 +11,8 @@ dependencies:
 - name: ztunnel
   repository: https://istio-release.storage.googleapis.com/charts
   version: 1.28.2
-digest: sha256:d187f68726cfffc69b115d2d98ee9c85ae97d763e6b400de1c75dc2fcd1c08b1
-generated: "2025-12-30T10:53:21.820744+01:00"
+- name: gateway
+  repository: https://istio-release.storage.googleapis.com/charts
+  version: 1.28.2
+digest: sha256:69935ff7894ae544151fd0a830bc9aa73fe3c9843e7318b8716a811d82685782
+generated: "2025-12-30T11:53:39.21462+01:00"

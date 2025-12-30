@@ -1,4 +1,7 @@
 istio-base:
-  _internal_defaults_do_not_set:
-    global:
-      istioNamespace: infra-network
+  global:
+    istioNamespace: infra-network
+istiod:
+  global:
+    istioNamespace: infra-network
+  profile: ambient

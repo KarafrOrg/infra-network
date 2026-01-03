@@ -5,8 +5,7 @@ metadata:
 spec:
   secretName: public-ingress-tls
   issuerRef:
-    name: letsencrypt-dns
+    name: letsencrypt
     kind: ClusterIssuer
   dnsNames:
-    - karafra.net
-    - '*.karafra.net'
+    - grafana.karafra.net

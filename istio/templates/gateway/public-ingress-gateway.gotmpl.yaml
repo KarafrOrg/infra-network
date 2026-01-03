@@ -8,12 +8,18 @@ spec:
     - name: https
       port: 443
       protocol: HTTPS
-      hostname: '*.karafra.net'
+      hostname: 'grafana.karafra.net'
       tls:
         mode: Terminate
         certificateRefs:
-          - kind: Secret
-            name: public-ingress-tls
+          - group: ''
+            kind: Secret
+            name: public-grafana-tls
       allowedRoutes:
         namespaces:
-          from: All
+          selector:
+            matchExpressions:
+              - key: name
+                operator: In
+                values:
+                  - infra-monitoring

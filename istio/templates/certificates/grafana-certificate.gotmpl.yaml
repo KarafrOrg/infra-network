@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: public-ingress-tls
+  name: grafana-public-tls
 spec:
   secretName: public-ingress-tls
   issuerRef:

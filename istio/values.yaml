@@ -6,7 +6,6 @@ istiod:
   global:
     istioNamespace: infra-network
   profile: ambient
-
   meshConfig:
     enableTracing: true
     extensionProviders:
@@ -14,6 +13,14 @@ istiod:
         opentelemetry:
           service: infra-monitoring-tempo.infra-monitoring.svc.cluster.local
           port: 4317
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: kubernetes.io/hostname
+      whenUnsatisfiable: ScheduleAnyway
+      labelSelector:
+        matchLabels:
+          app.kubernetes.io/name: istio
+          app.kubernetes.io/component: istiod
 cni:
   global:
     istioNamespace: infra-network
@@ -24,3 +31,19 @@ cni:
       enabled: true
 ztunnel:
   istioNamespace: infra-network
+gateway:
+  replicaCount: 0
+  topologySpreadConstraints:
+    - maxSkew: 1
+      topologyKey: kubernetes.io/hostname
+      whenUnsatisfiable: ScheduleAnyway
+      labelSelector:
+        matchLabels:
+          app.kubernetes.io/name: istio
+          app.kubernetes.io/component: gateway
+  grafana:
+    enabled: true
+    hostname: grafana.karafra.net
+    namespace: infra-monitoring
+    serviceName: infra-monitoring-grafana
+    servicePort: 80

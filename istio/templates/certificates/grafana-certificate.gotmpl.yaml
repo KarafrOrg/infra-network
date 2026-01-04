@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: grafana-public-tls
   issuerRef:
-    name: letsencrypt
+    name: letsencrypt-dns
     kind: ClusterIssuer
   dnsNames:
-    - grafana.karafra.net
+    - '*.karafra.net'

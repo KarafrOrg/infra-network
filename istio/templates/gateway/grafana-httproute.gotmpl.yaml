@@ -8,7 +8,7 @@ spec:
     - name: public-ingress-gateway
       group: gateway.networking.k8s.io
       kind: Gateway
-      namespace: infra-monitoring
+      namespace: infra-network
   hostnames:
     - grafana.karafra.net
   rules:

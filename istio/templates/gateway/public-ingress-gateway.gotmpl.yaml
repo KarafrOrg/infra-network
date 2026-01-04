@@ -24,3 +24,4 @@ spec:
                 operator: In
                 values:
                   - infra-monitoring
+                  - argocd

@@ -1,21 +1,19 @@
-{{- if .Values.gateway.grafana.enabled }}
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: grafana
-  namespace: {{ .Values.gateway.grafana.namespace }}
+  namespace: infra-monitoring
 spec:
   parentRefs:
     - name: public-ingress-gateway
-      namespace: {{ .Release.Namespace }}
+      namespace: infra-monitoring
   hostnames:
-    - {{ .Values.gateway.grafana.hostname | quote }}
+    - grafana.karafra.net
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: {{ .Values.gateway.grafana.serviceName }}
-          port: {{ .Values.gateway.grafana.servicePort | default 80 }}
-{{- end }}
+        - name: infra-monitoring-grafana
+          port: 80

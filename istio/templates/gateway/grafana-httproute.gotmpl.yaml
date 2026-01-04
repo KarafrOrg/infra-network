@@ -6,6 +6,8 @@ metadata:
 spec:
   parentRefs:
     - name: public-ingress-gateway
+      group: gateway.networking.k8s.io
+      kind: Gateway
       namespace: infra-monitoring
   hostnames:
     - grafana.karafra.net
@@ -16,4 +18,6 @@ spec:
             value: /
       backendRefs:
         - name: infra-monitoring-grafana
+          group: ''
+          kind: Service
           port: 80

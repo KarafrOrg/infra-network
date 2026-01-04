@@ -41,9 +41,3 @@ gateway:
         matchLabels:
           app.kubernetes.io/name: istio
           app.kubernetes.io/component: gateway
-  grafana:
-    enabled: true
-    hostname: grafana.karafra.net
-    namespace: infra-monitoring
-    serviceName: infra-monitoring-grafana
-    servicePort: 80

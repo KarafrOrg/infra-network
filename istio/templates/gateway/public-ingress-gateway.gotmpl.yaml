@@ -17,11 +17,4 @@ spec:
             name: public-ingress-gateway-tls
       allowedRoutes:
         namespaces:
-          from: Selector
-          selector:
-            matchExpressions:
-              - key: name
-                operator: In
-                values:
-                  - infra-monitoring
-                  - argocd
+          from: All

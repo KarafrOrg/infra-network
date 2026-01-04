@@ -33,6 +33,8 @@ ztunnel:
   istioNamespace: infra-network
 gateway:
   replicaCount: 0
+  service:
+    type: None
   topologySpreadConstraints:
     - maxSkew: 1
       topologyKey: kubernetes.io/hostname

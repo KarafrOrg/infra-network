@@ -1,6 +1,0 @@
-dependencies:
-- name: speedtest-exporter
-  repository: https://charts.alekc.dev
-  version: 0.1.2
-digest: sha256:75fd6ba57392d47e486e45f17612326b10e6198d284f43360d74cbc93b6c2c28
-generated: "2026-01-05T07:24:59.145885+01:00"

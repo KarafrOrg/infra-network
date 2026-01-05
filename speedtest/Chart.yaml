@@ -11,7 +11,3 @@ keywords:
   - networking
   - cert-manager
   - homelab
-dependencies:
-  - name: speedtest-exporter
-    version: 0.1.2
-    repository: https://charts.alekc.dev

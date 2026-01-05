@@ -4,7 +4,9 @@ metadata:
   name: external-vpn-any
 spec:
   hosts:
-    - "*"
+    - "*.google.com"
+    - "*.github.com"
+    - "httpbin.org"
   location: MESH_EXTERNAL
   resolution: NONE
   ports:

@@ -14,3 +14,8 @@ spec:
           port: 3128
           group: ''
           kind: Service
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /

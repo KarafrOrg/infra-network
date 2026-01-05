@@ -4,7 +4,7 @@ metadata:
   name: kiali
 spec:
   auth:
-    strategy: "token"
+    strategy: anonymous
   deployment:
     cluster_wide_access: true
     view_only_mode: false

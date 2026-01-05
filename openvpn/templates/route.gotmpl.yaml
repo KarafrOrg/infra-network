@@ -1,0 +1,12 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: wireguard-egress-route
+spec:
+  parentRefs:
+    - name: istio-vpn-egress-gateway
+      namespace: infra-network
+  rules:
+    - backendRefs:
+        - name: wireguard
+          port: 3128

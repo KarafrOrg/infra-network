@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  name: external-vpn-any
+spec:
+  hosts:
+    - "*"
+  location: MESH_EXTERNAL
+  resolution: NONE
+  ports:
+    - number: 80
+      protocol: HTTP
+      name: http
+    - number: 443
+      protocol: TLS
+      name: https

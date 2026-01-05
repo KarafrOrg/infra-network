@@ -2,5 +2,5 @@ dependencies:
 - name: tor-controller
   repository: https://bugfest.github.io/tor-controller
   version: 0.1.17
-digest: sha256:b8854445c42ebf789c3a0cd3c0ade68f2a60724114dd49c614ec48c74438782f
-generated: "2026-01-05T06:48:27.172339+01:00"
+digest: sha256:8752febd3e4e24a053f4d75bcca4babc1ed717d85aa71ccb100bae627f883734
+generated: "2026-01-05T06:52:58.295091+01:00"

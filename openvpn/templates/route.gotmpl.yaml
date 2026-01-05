@@ -5,8 +5,12 @@ metadata:
 spec:
   parentRefs:
     - name: istio-vpn-egress-gateway
+      group: gateway.networking.k8s.io
+      kind: Gateway
       namespace: infra-network
   rules:
     - backendRefs:
         - name: wireguard-vpn-proxy
           port: 3128
+          group: ''
+          kind: Service

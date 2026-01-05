@@ -26,7 +26,6 @@ securityContext:
   capabilities:
     drop:
       - ALL
-    readOnlyRootFilesystem: true
     runAsNonRoot: true
 
 service:

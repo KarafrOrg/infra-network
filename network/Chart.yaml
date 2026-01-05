@@ -1,0 +1,15 @@
+name: homelab-monitoring
+apiVersion: v2
+version: 0.1.0
+description: A Helm chart for deploying homelab monitoring stack
+type: application
+appVersion: "1.0.0"
+maintainers:
+  - name: KarafrOrg
+    email: karafra@karafra.net
+keywords:
+  - monitoring
+  - prometheus
+  - grafana
+  - loki
+  - homelab

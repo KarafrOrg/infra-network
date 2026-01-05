@@ -8,5 +8,8 @@ spec:
   deployment:
     cluster_wide_access: true
     view_only_mode: false
+  external_services:
+    prometheus:
+      url: http://prometheus-operated.infra-monitoring.svc.cluster.local:9090
   server:
     web_root: "/"

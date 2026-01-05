@@ -8,5 +8,5 @@ spec:
       namespace: infra-network
   rules:
     - backendRefs:
-        - name: wireguard
+        - name: wireguard-vpn-proxy
           port: 3128

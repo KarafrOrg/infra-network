@@ -1,0 +1,12 @@
+apiVersion: kiali.io/v1alpha1
+kind: Kiali
+metadata:
+  name: kiali
+spec:
+  auth:
+    strategy: "token"
+  deployment:
+    cluster_wide_access: true
+    view_only_mode: false
+  server:
+    web_root: "/"
